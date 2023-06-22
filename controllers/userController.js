@@ -40,7 +40,7 @@ class UserController extends controller {
             `validation failed. Reason:/${errors.array().map((err) => err.msg)}`
           );
       }
-
+      console.log("submitting new user");
       req.body.id = parseInt(req.body.id);
       let newUser = new User({
         fname: req.body.fname,

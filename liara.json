@@ -1,0 +1,8 @@
+{
+  "disks": [
+    {
+      "name": "mahdi",
+      "mountTo": "public"
+    }
+  ]
+}

@@ -15,8 +15,9 @@ router.get("/:id", UserController.seeOneUSer);
 
 router.post(
   "/",
+  body("name").notEmpty().withMessage("نام کاربری وارد نشده است"),
   body("email").isEmail().withMessage("ایمیل وارد شده اشتباه است"),
-  body("passwordConfirmation")
+  body("password")
     .isLength({
       min: 5,
     })

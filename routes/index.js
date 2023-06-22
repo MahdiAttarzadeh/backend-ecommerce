@@ -1,11 +1,13 @@
 const express = require("express");
 const config = require("../config");
 const router = express.Router();
+const homeController = require("controllers/homeController");
 
 
 router.use('/user' , require('./user'))
 router.use('/auth' , require('./auth'))
 router.use('/dashboard' , require('./dashboard'))
+router.get('/paycallback' , homeController.paycallback)
 
 router.get('/logout' , (req,res,next)=>{
   req.logout(function(err){
